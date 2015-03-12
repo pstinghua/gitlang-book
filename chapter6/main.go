@@ -3,7 +3,17 @@ package main
 import "fmt"
 
 func main() {
-  x := make(map[string]int)
-  x["key"] = 10
-  fmt.Println(x["key"])
+  x := []int{
+      48,96,86,68,
+      57,82,63,70,
+      37,34,83,27,
+      19,97, 9,17,
+  }
+  smallest := x[0]
+  for _, temp := range x {
+    if temp < smallest {
+      smallest = temp
+    }
+  }
+  fmt.Println(smallest)
 }
