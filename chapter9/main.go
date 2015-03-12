@@ -1,15 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+func distance(x1, y1, x2, y2 float64) float
 
 type Circle struct {
 	x, y, r float64
 }
 
+func (c *Circle) area() float64 {
+	return math.Pi * c.r * c.r
+}
+
+type Rectangle struct {
+	x1, y1, x2, y2 float64
+}
+
+func (r *Rectangle) area() float64 {
+
+}
+
 func main() {
-	// var c Circle
-	// c := new(Circle)
-	// c := Circle{x: 0, y: 0, r: 5}
 	c := Circle{0, 0, 5}
-	fmt.Println(c)
+	// fmt.Println(circleArea(&c))
+	fmt.Println(c.area())
 }
